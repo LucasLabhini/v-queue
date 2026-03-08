@@ -7,6 +7,12 @@
 ## 📋 Project Overview
 VQueue is designed for environments without internet access (festivals, local shops, or rural centers). It allows users to join virtual lines, track their turn, and receive notifications—all without Wi-Fi, cellular data, or account creation.
 
+## 📸 Screenshots
+
+| Queue Manager | Available Queues | Create Queue |
+| :---: | :---: | :---: |
+| ![Queue Manager](QueueManager.jpg) | ![Available Queues](AvailableQueues.jpg) | ![Create Queue](CreateQueue.jpg) |
+
 ---
 
 ## 🚀 Key Features
@@ -40,6 +46,15 @@ This project was a collaborative effort at the Faculty of Information Technology
 ## 📦 Deliverables
 * **[app-release.apk](./app-release.apk)**: Compiled Android package available for testing.
 * **[Vqueue_presentation.pptx](./Vqueue_presentation.pptx)**: Project presentation with video presentation.
+
+---
+
+## 👥 Authors
+- Adam Selmane — xselmaa00  
+- Eyobed A. Nuri  
+- Kaung San  
+- Krystof Michalek  
+- Lucas Labhini  
 
 ---
 
