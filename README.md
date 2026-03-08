@@ -1,52 +1,46 @@
-# 📱 VQueue - Offline Queue Management via Bluetooth LE
+# 📱 VQueue - Offline Queue Management via BLE
 
-> [cite_start]**Showcase Repository**: VQueue is a native Android application developed as a team project for the **"Application Development for Mobile Devices" (TAMa)** course at **Brno University of Technology (FIT VUT)** during an **Erasmus+ mobility**.
+> **Showcase Repository**: VQueue is a native Android application developed as a team project for the **"Application Development for Mobile Devices" (TAMa)** course at **FIT VUT Brno** during an **Erasmus+ mobility**. It provides a professional offline alternative to physical lines using a custom **Bluetooth Low Energy (BLE)** protocol to manage queues within a 100-meter range.
 
 ---
 
-## 📋 Overview
-[cite_start]VQueue provides a convenient offline alternative to physical lines, allowing users to queue within a 100-meter range using **Bluetooth Low Energy (BLE)**[cite: 1]. [cite_start]The system requires **no internet, no sign-up, and no account creation**[cite: 1, 6].
+## 📋 Project Overview
+VQueue is designed for environments without internet access (festivals, local shops, or rural centers). It allows users to join virtual lines, track their turn, and receive notifications—all without Wi-Fi, cellular data, or account creation.
 
 ---
 
 ## 🚀 Key Features
-* [cite_start]**Completely Offline**: Works anywhere without Wi-Fi or cellular data using a custom P2P BLE protocol[cite: 1, 5].
-* [cite_start]**Unlimited Client Support**: Solves the standard BLE limit (~7 connections) through a **Hybrid Architecture** combining transactional GATT connections with passive Advertising API broadcasting.
-* [cite_start]**Real-Time Updates**: Customers track their position and progress bar in real-time[cite: 5].
-* [cite_start]**Manual Management**: Queue managers can manually add people (without phones or iPhones) and pause the queue at any time[cite: 5].
-* [cite_start]**Persistent States**: Integrated **Room Database** ensures queue info and turns are not wiped if the process is killed[cite: 3].
+* **Hybrid BLE Architecture**: Bypasses the standard 7-connection limit of BLE by using brief **GATT connections** for the initial join, followed by **passive Advertising API broadcasting** for real-time status updates.
+* **Custom P2P Protocol**: Features a high-efficiency data exchange protocol using **byte packing** to fit the application ID and queue status into 19-byte BLE packets.
+* **Specialized Modes**:
+    * **Queue Manager**: Create a queue, call the next person, or manually add users who do not have a smartphone.
+    * **Customer Display**: Scans the area for active queues and displays real-time progress via a dedicated UI.
+* **Persistence**: Integrated **Room Database** to ensure queue data is saved locally and survives if the app process is interrupted.
 
 ---
 
 ## 🛠 Tech Stack
-* [cite_start]**Language**: **Java** & **XML** (Native Android SDK).
-* [cite_start]**Platform**: Targets Android 15 with compatibility back to Android 5.0 (SDK 21).
-* **Libraries (Jetpack)**: 
-    * [cite_start]**Room DB**: For local data persistence[cite: 3].
-    * [cite_start]**ViewModel**: To survive screen rotations and separate UI logic[cite: 3].
-    * [cite_start]**Navigation Component**: For seamless Fragment transitions[cite: 3].
-* [cite_start]**UI/UX**: **Material Design 2.0** with automatic light/dark theming based on user preferences[cite: 1, 5].
+* **Language**: **Java** and **XML** (Native Android SDK).
+* **Tools**: Android Studio, targeting Android 15 (compatible down to Android 5.0).
+* **Jetpack Libraries**: 
+    * **Room DB**: Local state storage.
+    * **ViewModel**: UI/Logic separation and rotation handling.
+    * **Navigation Component**: Fragment-based single-activity architecture.
+* **UI/UX**: **Material Design 2.0** with automated light/dark theme support.
 
 ---
 
-## 🏗 Technical Challenge & Discovery
-[cite_start]The biggest challenge was bypassing the physical connection limits of BLE[cite: 5]. 
-* [cite_start]**The Solution**: A custom data exchange protocol using **byte packing** to fit app identification, queue info, and status into tiny 19-byte BLE packets[cite: 6].
-* [cite_start]**Architecture**: A single-activity, fragment-based **MVC approach**[cite: 6].
+## 🌍 Team & Context
+This project was a collaborative effort at the Faculty of Information Technology, Brno University of Technology.
+* **Team**: Eyobed A. Nuri (Lead/Logic), **Lucas Labhini (UI/Bugs/Docs)**, Adam Selmane (BLE Logic), Krystof Michalek (Setup), Kaung San (Tests).
+* **My Contribution**: Developed the core concept, improved UI components, and fixed critical fragment navigation and instance bugs.
 
 ---
 
-## 🌍 Context & Team
-* [cite_start]**Institution**: Faculty of Information Technology, Brno University of Technology.
-* [cite_start]**Team**: Eyobed A. Nuri (Lead/BLE), **Lucas Labhini (UI/Bugs/Docs)**, Adam Selmane (BLE/RSSI), Krystof Michalek (Setup/Bugs), Kaung San (UI/Tests)[cite: 1, 4].
+## 📦 Deliverables
+* **[app-release.apk](./app-release.apk)**: Compiled Android package available for testing.
+* **[Vqueue_presentation.pptx](./Vqueue_presentation.pptx)**: Project feature and design overview.
 
 ---
 
-## 📋 About this Showcase
-This repository is a demonstration of native mobile development and low-level hardware access.
-* **Code Status**: Private collaborative academic project.
-* [cite_start]**App Size**: Ultra-lightweight (1.5 MB)[cite: 6].
-* **Assets**: Includes technical documentation and the compiled APK.
-
----
-*Developed during an Erasmus+ mobility at VUT Brno.*
+*Developed at FIT VUT Brno — 2025.*
