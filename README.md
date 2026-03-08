@@ -9,9 +9,9 @@ VQueue is designed for environments without internet access (festivals, local sh
 
 ## 📸 Screenshots
 
-| Queue Manager | Available Queues | Create Queue |
+| Available Queues | Create Queue | Queue Manager |
 | :---: | :---: | :---: |
-| ![Queue Manager](QueueManager.jpg) | ![Available Queues](AvailableQueues.jpg) | ![Create Queue](CreateQueue.jpg) |
+| ![Available Queues](AvailableQueues.jpg) | ![Create Queue](CreateQueue.jpg) | ![Queue Manager](QueueManager.jpg) |
 
 ---
 
