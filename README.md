@@ -39,7 +39,7 @@ This project was a collaborative effort at the Faculty of Information Technology
 
 ## 📦 Deliverables
 * **[app-release.apk](./app-release.apk)**: Compiled Android package available for testing.
-* **[Vqueue_presentation.pptx](./Vqueue_presentation.pptx)**: Project feature and design overview.
+* **[Vqueue_presentation.pptx](./Vqueue_presentation.pptx)**: Project presentation with video presentation.
 
 ---
 
